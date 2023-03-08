@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import WeatherComponent from "./WeatherComponent";
+import cities from "./cities.json";
 
 function App() {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      window.location.reload();
+    }, 5 * 60 * 1000); 
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className="container">
+      
+      <div class="search-bar">
+  <input type="text" placeholder="Search..."/>
+  <button type="submit">Add</button>
+</div>
+      {cities.List.map(city => (
+        <WeatherComponent 
+          cityCode={city.CityCode}
+          cityName={city.CityName} 
+          temp={city.Temp}
+          status={city.Status}
+        />
+      ))}
+      </div>
+      
+    </>
   );
 }
 
