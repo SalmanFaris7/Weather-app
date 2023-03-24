@@ -1,17 +1,17 @@
-*{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
     background-color: aqua;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-  
-  @media screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
     main {
-      flex-direction: column;
+        flex-direction: column;
     }
 }
 
@@ -58,11 +58,11 @@ body {
     width: 350px;
     margin-bottom: 20px;
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.close-button{
+.close-button {
     position: relative;
     height: 10px;
     width: 10px;
@@ -71,17 +71,17 @@ body {
 
 }
 
-.weather-container  .location-section {
+.weather-container .location-section {
     padding: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     justify-content: space-between;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     text-align: center;
 }
 
-.weather-container  .location-section .location-data {
+.weather-container .location-section .location-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +92,7 @@ body {
     font-weight: 700;
 }
 
-.weather-container  .location-section .wheather {
+.weather-container .location-section .wheather {
     display: flex;
     flex-direction: column;
 }
@@ -101,7 +101,7 @@ body {
     font-size: 35px;
 }
 
-.extra-details{
+.extra-details {
     position: relative;
     height: 120px;
     bottom: 0;
@@ -109,16 +109,17 @@ body {
     border-bottom-right-radius: 5px;
     width: 100%;
     padding: 1rem;
-    background-color:#373a47;
+    background-color: #373a47;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.location-section, .extra-details{
+.location-section,
+.extra-details {
     width: 320px;
-  height: 100px;
+    height: 100px;
 }
 
 .extra-details .phv-details {
@@ -126,7 +127,8 @@ body {
     flex-direction: column;
 }
 
-.phv-details .phv-stack, .sun-rise-set-data .sub-details{
+.phv-details .phv-stack,
+.sun-rise-set-data .sub-details {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -138,7 +140,9 @@ body {
     text-align: center;
 }
 
-.data-title, .data-value, .wind-speed{
+.data-title,
+.data-value,
+.wind-speed {
     font-size: small;
 }
 
@@ -147,7 +151,7 @@ body {
 }
 
 .data-value {
-    font-weight:100;
+    font-weight: 100;
 }
 
 .search-bar {
@@ -160,9 +164,9 @@ body {
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .search-bar input[type="text"] {
+}
+
+.search-bar input[type="text"] {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -170,9 +174,9 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     flex: 1;
     display: flex;
-  }
-  
-  .search-bar button[type="submit"] {
+}
+
+.search-bar button[type="submit"] {
     padding: 10px 20px;
     background-color: #2196F3;
     color: #fff;
@@ -181,9 +185,8 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .search-bar button[type="submit"]:hover {
+}
+
+.search-bar button[type="submit"]:hover {
     background-color: #0D8ABC;
-  }
-  
+}

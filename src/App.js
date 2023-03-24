@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import WeatherComponent from "./WeatherComponent";
-import cities from "./cities.json";
+import WeatherComponent from "./Components/WeatherApp/WeatherComponent";
+import cities from "C:/Users/Saleem Malik/Desktop/NODE/my-app/src/Components/WeatherApp/cities.json";
 
 function App() {
   useEffect(() => {

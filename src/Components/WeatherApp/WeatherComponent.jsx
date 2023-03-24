@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import './WeatherComponent.css';
 import axios from 'axios';
 import React, { useMemo } from 'react';
-
-const API_KEY = 'b4ff9486eb00db8d31420743a5914ab0';
+import { API_URL } from '../../APIHelper';
+import { API_KEY } from '../../constants';
 
 export default function WeatherComponent(weather, ...props) {
     
@@ -14,7 +14,7 @@ export default function WeatherComponent(weather, ...props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?id=${weather.cityCode}&appid=${API_KEY}`);
+        const response = await axios.get(`${API_URL}?id=${weather.cityCode}&appid=${API_KEY}`);
         setWeatherData(response.data);
       } catch (error) {
         console.error(error);
